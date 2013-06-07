@@ -1,0 +1,17 @@
+<!--@subject {{var store.getFrontendName()}}: New customer comment @-->
+<!--@vars
+{"htmlescape var=$rma.getCustomerName()":"Customer Name",
+"var comment":"RMA Comment",
+"var store.getFrontendName()":"Store Name",
+"var rma.getIncrementId()":"Return Id"
+@-->
+<!--@styles
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+@-->
+
+<body style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<p style="font-size:12px; line-height:16px; margin:0 0 10px 0;">
+    Customer {{htmlescape var=$order.getCustomerName()}} has left a new comment <blockquote>{{var comment}}</blockquote>
+    for the RMA request #{{var rma.getIncrementId()}}
+</p>
+</body>

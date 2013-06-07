@@ -1,0 +1,57 @@
+<!--@subject Promotion reminder at {{var store.getFrontendName()|escape}} @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"store url=\"customer/account/\"":"Customer Account Url",
+"var logo_url":"Email Logo Image Url",
+"var logo_alt":"Email Logo Image Alt",
+"var store.getFrontendName()|escape":"Store Name",
+"var promotion_name|escape":"Promotion Name",
+"var promotion_description|escape|nl2br":"Promotion Description",
+"var coupon.getCode()|escape":"Coupon Code",
+"var coupon.getUsageLimit()|escape":"Coupon Usage Limit",
+"var coupon.getUsagePerCustomer()|escape":"Coupon Usage Per Customer",
+"var customer.getName()|escape":"Customer Name"}
+@-->
+<!--@styles
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+@-->
+<body style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<div style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+    <tr>
+        <td align="center" valign="top" style="padding:20px 0 20px 0">
+            <table bgcolor="FFFFFF" cellspacing="0" cellpadding="10" border="0" width="650" style="border:1px solid #E0E0E0;">
+                <tr>
+                    <td valign="top">
+                        <a href="{{store url=""}}" style="color:#1E7EC8;"><img src="{{var logo_url}}" alt="{{var logo_alt}}" border="0"/></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <h1 style="font-size:22px; font-weight:normal; line-height:22px; margin:0 0 11px 0;"">Hello, {{var customer.getName()|escape}}</h1>
+                        <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">Hurry up to take advantage of {{if promotion_name}}<strong>{{var promotion_name|escape}}</strong>{{else}}a{{/if}} promotion!</p>
+
+                        {{if promotion_description}}
+                        <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">{{var promotion_description|escape|nl2br}}</p>
+                        {{/if}}
+
+                        <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">To take advantage of the promotion you need to log in at <a href="{{store url="customer/account/"}}">{{var store.getFrontendName()|escape}}</a>{{if coupon.getCode()}} and apply the coupon "{{var coupon.getCode()|escape}}" at the shopping cart{{/if}}.</p>
+
+                        {{if coupon.getUsageLimit()}}
+                        <p style="font-size:12px; line-height:16px; margin:0;">This coupon can be used only up to {{var coupon.getUsageLimit()|escape}} time(s) by you or other customers.</p>
+                        {{/if}}
+
+                        {{if coupon.getUsagePerCustomer()}}
+                        <p style="font-size:12px; line-height:16px; margin:0;">You can use this coupon up to {{var coupon.getUsagePerCustomer()|escape}} time(s).</p>
+                        {{/if}}
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#EAEAEA" align="center" style="background:#EAEAEA; text-align:center;"><center><p style="font-size:12px; margin:0;">Thank you again, <strong>{{var store.getFrontendName()}}</strong></p></center></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
+</body>

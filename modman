@@ -1,0 +1,6 @@
+#Philwinkle_Piratelang
+app/code/local/Philwinkle/Philwinkle_PirateLang    app/code/local/Philwinkle/Philwinkle_PirateLang/
+app/code/local/Zend/Locale.php                     app/code/local/Zend/Locale.php
+app/etc/modules/Philwinkle_PirateLang.xml          app/etc/modules/Philwinkle_PirateLang.xml
+app/locale/pr_US                                   app/locale/pr_US
+lib/Zend/Locale/Data/*                             lib/Zend/Locale/Data/

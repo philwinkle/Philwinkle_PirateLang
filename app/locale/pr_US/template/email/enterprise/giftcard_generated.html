@@ -1,0 +1,59 @@
+<!--@subject You've been sent a gift from {{var sender_name}} @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"var logo_alt":"Email Logo Image Alt",
+"var name|escape":"Recipient Name",
+"var sender_name_with_email|escape":"Sender Name with Email",
+"var store.getFrontendName()|escape":"Store Name",
+"var giftcards":"Gift Card Codes",
+"var balance":"Gift Card Balance",
+"var gift_message|escape|nl2br":"Sender Gift Message"}
+@-->
+<!--@styles
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+@-->
+
+<body style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<div style="background:#F6F6F6; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+    <tr>
+        <td align="center" valign="top" style="padding:20px 0 20px 0">
+        <!-- [ header starts here] -->
+            <table bgcolor="FFFFFF" cellspacing="0" cellpadding="10" border="0" width="650" style="border:1px solid #E0E0E0;">
+                <tr>
+                    <td valign="top">
+                        <a href="{{store url=""}}" style="color:#1E7EC8;"><img src="{{var logo_url}}" alt="{{var logo_alt}}" border="0"/></a>
+                    </td>
+                </tr>
+                <!-- [ middle starts here] -->
+                <tr>
+                    <td valign="top">
+                        <h1 style="font-size:22px; font-weight:normal; line-height:22px; margin:0 0 11px 0;"">{{var name|escape}}</h1>
+                        <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">{{var sender_name_with_email|escape}} has sent you a gift card for use at {{var store.getFrontendName()|escape}} and it is now ready to be used for purchases.</p>
+
+                        <div style="font-size:12px; line-height:16px; margin:0 0 16px 0;">
+                            <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;"><strong>The Gift Card code(s):</strong></p>
+                            {{var giftcards}}
+                        </div>
+
+                        <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">{{if is_multiple_codes}}Each{{else}}The{{/if}} card has a balance of {{var balance}} that can be used at <a href="{{store url=""}}">{{store url=""}}</a>.</p>
+                        {{if is_redeemable}}
+                        <p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">Click at the code(s) above to redeem them into Store Credit.</p>
+                        {{/if}}
+
+                        <div style="font-size:12px; line-height:16px; margin:0 0 16px 0;">
+                        {{var gift_message|escape|nl2br}}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#EAEAEA" align="center" style="background:#EAEAEA; text-align:center;"><center><p style="font-size:12px; margin:0;">Thank you again, <strong>{{var store.getFrontendName()}}</strong></p></center></td>
+                </td>
+            </table>
+
+        </td>
+    </tr>
+</table>
+</div>
+</body>
