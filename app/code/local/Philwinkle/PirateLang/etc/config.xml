@@ -14,8 +14,8 @@
             </piratelang>
             <core>
                 <rewrite>
-                    <locale_config>piratelang/locale_config</locale_config>
-                    <locale>piratelang/locale</locale>
+                    <locale_config>Philwinkle_PirateLang_Model_Locale_Config</locale_config>
+                    <locale>Philwinkle_PirateLang_Model_Locale</locale>
                 </rewrite>
             </core>
         </models>
