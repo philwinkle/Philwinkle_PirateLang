@@ -1,7 +1,11 @@
 #Philwinkle_Piratelang
-app/code/local/Philwinkle/PirateLang    app/code/local/Philwinkle/PirateLang
-app/code/local/Zend/Locale.php                     app/code/local/Zend/Locale.php
-app/etc/modules/Philwinkle_PirateLang.xml          app/etc/modules/Philwinkle_PirateLang.xml
-app/locale/pr_US                                   app/locale/pr_US
-lib/Zend/Locale/Data/pr.xml                        lib/Zend/Locale/Data/pr.xml
-lib/Zend/Locale/Data/pr_US.xml                     lib/Zend/Locale/Data/pr_US.xml
+app/code/local/Philwinkle/PirateLang/etc/config.xml				app/code/local/Philwinkle/PirateLang/etc/config.xml
+app/code/local/Philwinkle/PirateLang/Helper/Data.php			app/code/local/Philwinkle/PirateLang/Helper/Data.php
+app/code/local/Philwinkle/PirateLang/Model/Locale/Config.php	app/code/local/Philwinkle/PirateLang/Model/Locale/Config.php
+app/code/local/Philwinkle/PirateLang/Model/Locale.php			app/code/local/Philwinkle/PirateLang/Model/Locale.php
+app/code/local/Philwinkle/PirateLang/Model/Observer.php			app/code/local/Philwinkle/PirateLang/Model/Observer.php
+app/code/local/Zend/Locale.php									app/code/local/Zend/Locale.php
+app/etc/modules/Philwinkle_PirateLang.xml						app/etc/modules/Philwinkle_PirateLang.xml
+app/locale/pr_US												app/locale/pr_US
+lib/Zend/Locale/Data/pr.xml										lib/Zend/Locale/Data/pr.xml
+lib/Zend/Locale/Data/pr_US.xml									lib/Zend/Locale/Data/pr_US.xml
