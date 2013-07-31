@@ -4,4 +4,4 @@ app/code/local/Zend/Locale.php                     app/code/local/Zend/Locale.ph
 app/etc/modules/Philwinkle_PirateLang.xml          app/etc/modules/Philwinkle_PirateLang.xml
 app/locale/pr_US                                   app/locale/pr_US
 lib/Zend/Locale/Data/pr.xml                        lib/Zend/Locale/Data/pr.xml
-lib/Zend/Locale/Data/*                             lib/Zend/Locale/Data/pr_US.xml
+lib/Zend/Locale/Data/pr_US.xml                     lib/Zend/Locale/Data/pr_US.xml
